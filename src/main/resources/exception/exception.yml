@@ -1,0 +1,8 @@
+testException:
+  code: 001
+  msg: "테스트 예외 1"
+  status: 500
+undefined:
+  code: 001
+  msg: "정의되지 않은 예외"
+  status: 500

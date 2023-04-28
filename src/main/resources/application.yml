@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mariadb://192.168.0.113:28306/myblog
+    hikari:
+      username: root
+      password: 1q2w3e4r5t!@
+
+
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration:
+    jdbc-type-for-null: NULL
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    jdbc:
+      sqlonly: off
+      sqltiming: info
+      resultsettable: info
+      audit: off
+      resultset: off
+      connection: off

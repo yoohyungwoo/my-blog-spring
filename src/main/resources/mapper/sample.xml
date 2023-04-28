@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.blog.myblogspring.sample.dao.SampleDao">
+
+    <select id = "retrieveSample" parameterType="com.blog.myblogspring.sample.model.SampleReq"
+            resultType="com.blog.myblogspring.sample.model.SampleRes">
+        SELECT
+            U.USER_ID
+            , U.USER_NAME
+            , U.EMAIL
+        FROM
+            `User` U
+        WHERE
+            U.USER_ID = #{userId}
+    </select>
+</mapper>
